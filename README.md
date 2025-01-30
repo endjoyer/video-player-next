@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Video Player Next
 
-## Getting Started
+Это проект на Next.js, который реализует видеоплеер с использованием паттерна конечного автомата с XState. Приложение включает модальный видеоплеер с функциями воспроизведения/паузы и возможностью переключения между полным и мини-режимами.
 
-First, run the development server:
+## Возможности
+
+- Воспроизведение видео с использованием Video.js
+- Управление состоянием с помощью XState
+- Адаптивный дизайн с использованием компонента Modal из Ant Design
+- Переключение между полным и мини-режимами плеера
+
+## Начало работы
+
+### Предварительные требования
+
+Убедитесь, что у вас установлены Node.js и npm.
+
+### Установка
+
+1. Клонируйте репозиторий:
+
+   ```bash
+   git clone https://github.com/endjoyer/video-player-next.git
+   ```
+
+2. Перейдите в директорию проекта:
+
+   ```bash
+   cd video-player-next
+   ```
+
+3. Установите зависимости:
+
+   ```bash
+   npm install
+   ```
+
+### Запуск сервера разработки
+
+Запустите сервер разработки:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в вашем браузере, чтобы просмотреть приложение.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Сборка для продакшена
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Чтобы собрать приложение для продакшена, выполните:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Структура проекта
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/components`: Содержит React-компоненты, такие как `VideoPlayer` и `PlayerModal`.
+- `app/utils`: Содержит утилиты и определение конечного автомата XState.
+- `app/styles`: Содержит пользовательские CSS-стили.
+- `app/layout.tsx`: Определяет корневую разметку приложения.
+- `app/page.tsx`: Основной компонент страницы, который рендерит `VideoPlayer`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Узнать больше
 
-## Deploy on Vercel
+Чтобы узнать больше о технологиях, используемых в этом проекте, ознакомьтесь со следующими ресурсами:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Документация Next.js](https://nextjs.org/docs)
+- [Документация XState](https://xstate.js.org/docs)
+- [Документация Ant Design](https://ant.design/docs/react/introduce)
+- [Документация Video.js](https://docs.videojs.com)
