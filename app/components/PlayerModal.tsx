@@ -30,7 +30,7 @@ export default function PlayerModal({
   const player = useRef<videojs.Player | null>(null);
 
   useEffect(() => {
-    if (isOpen && videoRef.current) {
+    if (isOpen && videoRef.current && !player.current) {
       player.current = videojs(videoRef.current, {
         sources: [
           {
@@ -59,7 +59,8 @@ export default function PlayerModal({
   return (
     <Modal
       open={isOpen}
-      width={currentState === 'full' ? '90%' : '45%'}
+      width={currentState === 'full' ? '80%' : '45%'}
+      style={{ maxWidth: currentState === 'full' ? '1000px' : '500px' }}
       onCancel={onClose}
       title="PLAYER"
       footer={[
