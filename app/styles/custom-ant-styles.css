@@ -26,8 +26,8 @@ body {
 
 .ant-modal {
   margin: 2vh auto auto !important;
-  top: 50%;
-  transform: translateY(-50%);
+  max-width: 1000px;
+  min-width: 250px;
 }
 
 .ant-modal-header,
@@ -65,4 +65,26 @@ body {
 .vjs-control-text,
 .vjs-modal-dialog {
   display: none !important;
+}
+
+@media (max-width: 768px) {
+  .closed-modal {
+    height: 100px;
+    width: 200px;
+  }
+
+  .playing-icon {
+    font-size: 40px;
+  }
+
+  .ant-modal-header,
+  .ant-modal-footer,
+  .ant-modal-body {
+    padding: 10px 15px !important;
+  }
+
+  .ant-modal-close {
+    top: 10px !important;
+    right: 10px !important;
+  }
 }
